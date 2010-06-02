@@ -1,0 +1,17 @@
+# app/config/application.yml
+defaults: &defaults
+  domain: 127.0.0.1:3000
+  per_page: 10
+  app_name: TinyTopic
+  # neat_setting: 24
+  # awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
+
+development:
+  <<: *defaults
+  per_page: 2
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

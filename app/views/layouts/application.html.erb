@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title><%= Setting.app_name %></title>
+	<%= stylesheet_link_tag "html", "desktop", :cache => "cached_desktop" %>
+	<%= yield :styles %>
+</head>
+<body>
+	<div id="container">
+		<div id="top">
+			<b class="app_name"><a href="/"><%= Setting.app_name %></a></b>
+			<div id="userbar">
+				<% if @current_user %>
+					Hello <%= h @current_user.name %>, <%= link_to 'New post', new_post_path %> | <a href="<%= edit_account_path %>">Account</a> | <a href="<%= destroy_user_session_path %>">Logout</a>
+				<% else %>
+					<a href="<%= new_user_session_path %>">Login</a> | <a href="<%= new_account_path %>">Register</a>
+				<% end %>
+			</div>
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+		<div id="foot">
+			Powered by opensource project <a href="http://github.com/huacnlee/tinytopic/" target="_blank">tinytopic</a>.
+		</div>
+	</div>
+</body>
+</html>

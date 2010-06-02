@@ -1,0 +1,11 @@
+<h1>Editing post</h1>
+
+<div class="form">
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+	<%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Update' %> or <%= link_to 'Back', posts_path %>
+  </p>
+<% end %>
+</div>

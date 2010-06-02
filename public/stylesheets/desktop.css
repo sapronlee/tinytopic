@@ -1,0 +1,23 @@
+body { text-align: center; background:#DDD; background:url(/images/bg.png) left top repeat-x;}
+a:link,
+a:visited { color:#231D99;}
+input.long,textarea.long { width:800px;}
+
+.pagination { text-align: center; font-size:90%;}
+.form { }
+  .form p { margin-bottom:8px;}
+
+#container { width:800px; margin:0 auto; text-align: left;  }
+#top { padding:20px 0; }
+  #top .app_name a:link,
+  #top .app_name a:visited { font-size:200%; color:#3C6A4A;  }
+  #top #userbar { text-align: right; }
+h1 { font-size:140%; margin-bottom:10px;}
+#main {margin-bottom:10px; }
+  .posts { margin:0; padding:0;}
+  .posts .item { border:1px solid #CCC; border-radius: 7px; list-style: none inside;
+    margin-bottom:10px;}
+  .posts .item .body { margin:10px; font-size: 80%; line-height:130%; }
+  .posts .item .edit { font-size:80%; text-align: right; padding:10px; }
+  .posts .item .info { font-size:12px; padding:8px; background:#F0F0F0; border-radius: 7px;}
+#foot { margin-top:10px; color:#999; text-align: center; font-size:0.8em;}
