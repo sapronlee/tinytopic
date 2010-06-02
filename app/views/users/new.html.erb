@@ -1,7 +1,9 @@
 <h1>Register</h1>
 
+<div class="form">
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
+  <%= f.submit "Register" %> or <a href="<%= new_user_session_path %>">Login</a>
 <% end %>
+</div>
