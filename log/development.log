@@ -5735,3 +5735,196 @@ Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:18:10) [GET]
 Rendering template within layouts/application
 Rendering posts/index
 Completed in 96ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/?page=1]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-06-02 23:19:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:19:22', "perishable_token" = 'h-7ATrk-49UGc-7U7RqV', "last_request_at" = '2010-06-02 15:19:22' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/application
+Rendering posts/new
+  [4;35;1mActsAsTaggableOn::Tag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = 'tags' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Post'))) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Post'))) [0m
+Rendered posts/_form (3.0ms)
+Completed in 37ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/posts/new]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-02 23:19:22) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:19:23', "perishable_token" = 'MdR57cJBlqmmfhrT9O1S', "last_request_at" = '2010-06-02 15:19:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (2.1ms)
+Completed in 105ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/account/edit]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-06-02 23:19:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:19:23', "perishable_token" = 'dbx0VPINaWpen1lnzY2J', "last_request_at" = '2010-06-02 15:19:23' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/application
+Rendering posts/new
+  [4;35;1mActsAsTaggableOn::Tag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = 'tags' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Post'))) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Post'))) [0m
+Rendered posts/_form (3.2ms)
+Completed in 44ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:19:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (427.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:19:24', "perishable_token" = 'nalIRyUNSxYjZddGqAUL', "last_request_at" = '2010-06-02 15:19:24' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 703ms (View: 6, DB: 430) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:20:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-06-02 15:20:33', "perishable_token" = '2O5Zdow6mBfOS3ohmDxb', "last_request_at" = '2010-06-02 15:20:33' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;35;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 37ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:20:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:20:50', "perishable_token" = 'KEgnQqQhCNmmi1iT_S0g', "last_request_at" = '2010-06-02 15:20:50' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 96ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:21:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-06-02 15:21:00', "perishable_token" = 'fYbtYChgq_THjL4rZPAW', "last_request_at" = '2010-06-02 15:21:00' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;35;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 36ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:21:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:21:39', "perishable_token" = 'X0WY6zF66jfIwc16EwN0', "last_request_at" = '2010-06-02 15:21:39' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 99ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:22:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-06-02 15:22:13', "perishable_token" = 'tuuO2vfMhPz4iXEHZp_m', "last_request_at" = '2010-06-02 15:22:13' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;35;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 36ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:22:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:22:22', "perishable_token" = 'XH_Y20q4OEdywH1PwOwL', "last_request_at" = '2010-06-02 15:22:22' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 97ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:22:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-06-02 15:22:27', "perishable_token" = 'XsgVT3KDRrKv2-6dBduR', "last_request_at" = '2010-06-02 15:22:27' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;35;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 36ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:22:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-06-02 15:22:45', "perishable_token" = 'DAfbeBaqOtyKjJbz1nMG', "last_request_at" = '2010-06-02 15:22:45' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 97ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/]
