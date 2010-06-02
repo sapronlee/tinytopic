@@ -6071,3 +6071,340 @@ Rendering template within layouts/application
 Rendering users/new
 Rendered users/_form (1.5ms)
 Completed in 77ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/account/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-02 23:28:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/account/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:28:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 31ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-02 23:28:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-02 23:28:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/account/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-02 23:29:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/user_session/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:29:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;35;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 92ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-02 23:29:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:29:06) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5dd84fbd46e5470b260b88b7c4ffe8850d6378e2e354ad0caa465efc1c93597daf3cfba5dcf0be4a3350d75582db343eca4e4608c36c2c57cc5277b15ecd99fc') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pk6XNrFeh4PGEBrVCcMX') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (64.1ms)
+Completed in 92ms (View: 73, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:30:12) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '658c79ef1254d453025010ade7ba64049f93b207586696ef67d7d07f9f6f4fd926a554b9ee63f7f3d4efdc7a4750c18aada2c3c2cfb6493e0edd236270507cfb') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'nLjphzJL870Co5q5omf_') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.8ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:30:35) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b6edaf059a86f63a459c8e6f6b7f8924b96ca25dc7ec0e9a4aa37cb3c36eceff47e7bc3fd0a94655c85e5f59b58052713d9e11c8b34fdffc2aecf44c2af20a4d') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'XYRxKhO4Q6yUmouL9tWC') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (67.6ms)
+Completed in 95ms (View: 76, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:30:42) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7eb4349bcb45e777fc5568dfa55d43fa089a644e91be29de55a01aace146fa78db457cd626fa359938141ef96aa0263a48204ea440d5db376cf5e109cb12aa47') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'qoPDX0NR7w49dL7TJ5zI') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:31:20) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'aa0a5a5d522d085ec31f5c159325dea826e3fba6594a88502f2f82f07b151d28bd2df07c4a5faaf75be529ce867da9f9f849041ce111a9e7ecd11cc6971915cf') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1iumQ-b1OGtM9_Ci9Z5f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.1ms)
+Completed in 94ms (View: 77, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:31:59) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '04ca04be80403e0a28a220d1e8d5107f1a61da771b0a12900c031f7d6b69057ca93332c033812b9f6f95a0970148505960f4ec9e6b2758763e76e80753b35a03') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'fW_8pPVR8cFiGeBU2hSx') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:32:13) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3915e919536900a92cb1cf2ba54db3730ae7f9987ee36e3a9a19688f104509c5a335eef8474b0aab29c20671f8daf4ccd8f2cab19921b4e48f12b44311a28c1b') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Y78xNQktx9LDZSi0kkwe') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 33ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:32:20) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5d5367df35a8e1e6c9c6c20930300d1deb725d42b0a6304fb24f6ba4999db24cfe939477784406366c3cd165f0f509a725878216fc6f31af64d9ec00c7f6e482') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'qr0UDzCwaqc6EyBo__xS') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.1ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:32:33) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'baae8f6a72db23c0b71b77b4391c45f3cd68f6cee68e86eefc221d6bab98f9074e28799a25e571889ad79be667934c4665a3ab450ca6d2d5561a3c26796d7033') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'GMn-fwPHOfwVr5w20xfV') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.8ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:32:48) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c7d774225eaeb6a915a3424d1a625671570fb92d87ac96e5554895c91ba7e06c66c9089dea843f34ab8e83084b271d75314260a09ddc5e5aa2b3605b0d796ca4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vd8cJLUp-SIQAgY-gy3O') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.8ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:33:09) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '539413bf721b9f6fc6c9b903c73b644f2867daee05d3281a60795775ba9c2477ce4ee23e07a39d44699968633ee85e158cdd01db13cf2f9a3abac2704dd268a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Vslm-4J9klI-Vs9ZZNl1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:33:23) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8513e220eff081ac03dc363adc50ee46cbced26d4518259ecaf40f2bf025659439be3312e91e0cf00ef73baab772263d691d8bad61f8bb6aa3c570aa7a91c1ab') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'aBLnDhMKW-alUxbB-iix') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 34ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:33:33) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8c4357c92031df3dc0f47061ab2cedb56a060c2064b507af66624119257d57f58e2c68a73159d4a60b8ef1120380d89d94e50ab7745f6843ab4383300c75db13') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'syOZz-U2c8b5uv8khP2Q') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.2ms)
+Completed in 35ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:33:45) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'de63bb552b1463065cc15ed83aacf282fd7fb70be88434604a54f4b20f31a0303e45bb474abf28fcac01783bd7a9174e2da18f3e95b3e1d91ed34bb61264cf00') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'XfLkj8mX1SQt_NTlD18q') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.4ms)
+Completed in 95ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:34:14) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7b9e5c67b4b4ad99f0e83f039baac14dbbb37b33bf3e121e90ec18845f5b731fb96330e71e51309390d18819fbe9edd93a13fddbfbd69530124640ed233871eb') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'N0dh2ReALCbPiC41M-jN') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.0ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:34:31) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2880f4aa873843047130236d68408ab3024397766e2e2c724455066757af17fd8db80cbb21b9edfaeeddd089e3cabfc436b61a3c116ac4e076ae220d3d4f9a3a') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'VMW2r_DfqRvMpCwOMPfx') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.0ms)
+Completed in 93ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:34:55) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd6e77544dda8b4357d49c78eb26e60332b4a890361e0049c5876fd3db77b0499330f0e39e803d13cd9f46fafde3c227b6fc8df0a64bb7d60c3b011765d0a12c8') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ht1un2zZQWHuHNLPXtUd') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:35:02) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"admin", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '63f4db386e5401e30ad20c2e944700b9aad17bbedc56a93ac8bfa1237d3ccffdfe8aacbf40fce1cbc7c43d3b0a1f6e6bee920f2632280b2e35083ce343f0d879') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NLKv2B_qZC7vhCZLSydE') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.3ms)
+Completed in 91ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:35:09) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"admin1", "email"=>"admin"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'admin1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0fc1480f922771d13053bc7aa88f66e275d11e1978c80d1a460528a4dbcd628e1172d4481a07753b592e0eb34aa39a82092be60299c2f4728d03409f07dc6ca8') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'nUOLbh6NfIyuOZ3HtuTS') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.2ms)
+Completed in 30ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-02 23:35:27) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"admin1", "email"=>"admin"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (54.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'admin1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7e99e8b202c1188fd3c9219b28dad0e4552170d45acc7d45ea794d48f96f4015a6dbe2e68a78c55faf6b26baad747ec0c01515e69a58e0bee00763fe7fa1679f') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'IECXYB_nXAzReVfSbV-F') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.1ms)
+Completed in 91ms (View: 14, DB: 55) | 200 OK [http://127.0.0.1/account]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-02 23:35:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY id desc LIMIT 2 OFFSET 0[0m
+  [4;36;1mActsAsTaggableOn::Tagging Load (0.2ms)[0m   [0;1mSELECT "taggings".* FROM "taggings" WHERE ("taggings"."taggable_id" IN (7,6) and "taggings"."taggable_type" = 'Post' AND (taggings.tagger_id IS NULL AND taggings.context = 'tags')) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 33ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-02 23:35:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-06-02 23:35:35) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/user_session]
