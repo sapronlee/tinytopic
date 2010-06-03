@@ -23,9 +23,12 @@ input.long,textarea.long { width:800px;}
 h1 { font-size:140%; margin-bottom:10px;}
 #main {margin-bottom:10px; }
   .posts { margin:0; padding:0;}
-  .posts .item { border:1px solid #CCC; border-radius: 7px; list-style: none inside;
+  .posts .item { border:1px solid #DDD; border-radius: 7px; list-style: none inside;
     margin-bottom:10px;}
-  .posts .item .body { margin:10px; font-size: 80%; line-height:130%; }
-  .posts .item .edit { font-size:80%; text-align: right; padding:10px; }
-  .posts .item .info { font-size:12px; padding:4px 8px; background:#F5F5F5; margin:1px;}
+  .posts .item .body { margin:10px; font-size: 90%; line-height:130%; }
+  .posts .item .edit { font-size:80%; text-align: left; padding:2px 10px; }
+  .posts .item .info { font-size:12px; padding:4px 8px;
+    background:#F5F5F5; border-radius:0 0 7px 7px; }
+  .posts #comments { margin:8px; }
+  .posts #comments li { margin-bottom:5px; line-height:100%; font-size:80%; }
 #foot { margin-top:10px; color:#999; text-align: center; font-size:0.8em;}

@@ -1,17 +1,53 @@
+<% content_for :scripts do %>
+<script type="text/javascript">
+  function loadComments(id){
+    if($("#post"+id+" .comments:hidden").length > 0){
+      $("#comments").show();
+      return false;
+    }
+    if($("#post"+id+" .comments").length > 0){
+      $("#comments").hide();
+      return false;
+    }
+
+    $.ajax({
+      url : "<%= comments_path %>",
+      data : { commentable_type : "Post", commentable_id : id },
+      type : "GET",
+      dataType : "html",
+      success : function(html){
+        if(html == ""){
+          alert("Error.");
+        }
+        $("#comments").remove();
+        $("#post"+id).append(html);
+      }
+    });
+    return false;
+  }
+</script>
+<% end %>
 <ul class="posts">
 <% @posts.each do |post| %>
-  <li class="item">
-    <div class="body"><%=simple_format h post.body %></div>
-		<div class="edit"><%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></div>
+  <li id="post<%= post.id %>" class="item">
+    <div class="body" title="<%= post.created_at %>"><%=simple_format h post.body %></div>
+    <% if owner? post %>      
+      <div class="edit">
+      <a href="<%= edit_post_path(post) %>">修改</a> | 
+      <%= link_to '删除', post, :confirm => '确定要删除吗?', :method => :delete %>
+      </div>
+    <% end %>
 		<div class="tags">
 			<%= post.tags.collect { |tag| tag.name } %>
 		</div>
 		<div class="info">
-			<%= h post.user.name %> created on <%= time_ago_in_words(post.created_at) %>
-			<a href="#" class="comment"><%=h post.comments_count %></a>
+      <span class="author"><%= h post.user.name %></span>
+      <a href="<%= post_path(post) %>">#<%= post.id %></a>
+      <a href="#" onclick="return loadComments(<%= post.id %>);" class="comment"><%=h post.comments_count %> 条评论</a>
 		</div>
   </li>
 <% end %>
 </ul>
 <%= will_paginate @posts %>
+
 

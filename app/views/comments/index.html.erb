@@ -1,0 +1,28 @@
+<div id="comments" class="comments">
+<% if @comments.blank? %>
+<ul>
+  <li class="none_result">
+    暂无评论。
+  </li>
+<ul>
+<% else %>
+<ol>
+  <% for item in @comments %>
+    <%= render :partial => "comment", :locals => { :item => item } %>
+  <% end %>
+</ol>
+<% end %>
+<div id="new_comment">
+<% remote_form_for @comment, :before => "beforeCreateComment()" do |f| %> 
+  <%= f.hidden_field :commentable_type %>
+  <%= f.hidden_field :commentable_id %>
+  <%= f.text_field :comment %>
+  <button type="submit">发表评论</button>
+<% end %>
+</div>
+<script type="text/javascript">
+  function beforeCreateComment(){
+    $("#new_comment button").text("提交中...").attr("disabled",true);
+  }
+</script>
+</div>

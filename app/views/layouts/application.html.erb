@@ -8,6 +8,8 @@
 	<%= yield :styles %>
 </head>
 <body>
+  <%= javascript_include_tag("jquery", :cache => "cached_jquery") %>
+  <%= yield :scripts %>
 	<div id="container">
 		<div id="top">
 			<b class="app_name"><a href="/"><%= Setting.app_name %></a></b>

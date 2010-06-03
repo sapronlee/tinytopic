@@ -1,0 +1,8 @@
+<% if @comment.errors.size != 0 %>
+alert("<%= escape_javascript @comment.errors.full_messages.join("\n") %>");
+<% else %>
+$("#comments .no_result").remove();
+$("#new_comment").before("<%= escape_javascript(render(:partial => "comment", :locals => { :item => @comment })) %>");
+$("#new_comment #comment_comment").val("").focus();
+$("#new_comment button").text("发表评论").attr("disabled",false);
+<% end %>

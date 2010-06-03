@@ -9,6 +9,22 @@ class ApplicationController < ActionController::Base
   def init
     current_user
   end
+
+  def render_404
+    render_optional_error_file(404)
+  end
+
+  def notice_success(msg)
+    flash[:notice] = msg
+  end
+
+  def notice_error(msg)
+    flash[:notice] = msg
+  end
+
+  def notice_warring(msg)
+    flash[:notice] = msg
+  end
   
   private
     def current_user_session
