@@ -1,10 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title><%= Setting.app_name %></title>
-	<%= stylesheet_link_tag "html", "desktop", :cache => "cached_desktop" %>
+  <% if @mobile_device %>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+    <meta name="HandheldFriendly" content="true" />
+    <%= stylesheet_link_tag "html", "mobile", :cache => "cached_mobile" %>
+  <% else %>
+    <%= stylesheet_link_tag "html", "desktop", :cache => "cached_desktop" %>
+  <% end %>
 	<%= yield :styles %>
 </head>
 <body>

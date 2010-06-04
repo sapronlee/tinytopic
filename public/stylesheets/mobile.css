@@ -1,0 +1,50 @@
+body { text-align: center; background:#DDD; background:url(/images/bg.png) left top repeat-x;}
+a:link,
+a:visited { color:#231D99;}
+input.long,textarea.long { width:100%;}
+
+.fieldWithErrors{ color:#CC707C; display:inline;}
+#errorExplanation {width:300px;border:2px solid #CC707C; padding-bottom:12px;margin-bottom:20px;}
+#errorExplanation h2{text-align:left;font-weight:bold; padding:4px 10px; font-size:12px;
+  background-color:#CC707C;color:#fff;}
+#errorExplanation p{color:#333;margin-bottom:0;padding:10px;}
+#errorExplanation ul { padding:0 30px; }
+#errorExplanation ul li {font-size:12px;list-style:square;}
+
+.successMessage,
+.warringMessage,
+.errorMessage { color:#FFF; font-size:12px; padding:4px 10px; margin:10px 0; }
+.successMessage { background:green; }
+.warringMessage { background:#F5B800; }
+.errorMessage { background:#CC707C;}
+
+.pagination { text-align: center; font-size:90%;}
+.form { }
+  .form p { margin-bottom:8px;}
+
+#container { width:95%; margin:0 auto; text-align: left;  }
+#top { padding:20px 0; }
+  #top .app_name a:link,
+  #top .app_name a:visited { font-size:200%; color:#3C6A4A;  }
+  #top #userbar { text-align: right; }
+h1 { font-size:140%; margin-bottom:10px;}
+#main {margin-bottom:10px; }
+  .posts { margin:0; padding:0;}
+  .posts .item { border:1px solid #DDD; border-radius: 7px; list-style: none inside;
+    margin-bottom:10px;}
+  .posts .item .body { margin:10px; font-size: 90%; line-height:130%; }
+  .posts .item .edit { font-size:80%; text-align: left; padding:2px 10px; }
+	.posts .item .tags { font-size:70%; margin:2px 10px;padding-left: 37px;
+		background: transparent url(/images/icons.gif) no-repeat -109px 0px; }
+	.posts .item .tags .tag { margin-right:6px; }
+  .posts .item .info { font-size:12px; padding:4px 8px;
+    background:#F5F5F5; border-radius:0 0 7px 7px; }
+	.posts .item .info a:link,
+	.posts .item .info a:visited,
+	.posts .item .info span { margin-right:8px; color:#777; }
+	.posts .item .info a.comment {color: #727272; padding-left: 20px;	
+		background: transparent url(/images/icons.gif) no-repeat 0px -64px;}
+  .posts #comments { margin:8px; }
+  .posts #comments li { margin-bottom:5px; line-height:100%; font-size:80%; }
+	.posts #comments li span.author { color:#666; font-weight:bold; margin-right:4px; }
+#foot { margin-top:10px; color:#999; text-align: center; font-size:0.8em;}
