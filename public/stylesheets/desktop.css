@@ -14,22 +14,22 @@ h1 { font-size:140%; margin-bottom:10px;}
   .posts .item { border:1px solid #DDD; border-radius: 7px; list-style: none inside;
     margin-bottom:10px;}
   .posts .item .body { margin:10px; font-size: 90%; line-height:130%; }
-  .posts .item .edit { font-size:80%; text-align: left; padding:2px 10px; }
 	.posts .item .tags { font-size:70%; margin:2px 10px;padding-left: 37px;
 		background: transparent url(/images/icons.gif) no-repeat -109px 0px; }
 	.posts .item .tags .tag { margin-right:6px; }
-  .posts .item .info { font-size:12px; padding:4px 8px;
+  .posts .item .info { font-size:85%; padding:4px 8px;
     background:#F5F5F5; border-radius:0 0 7px 7px; }
 	.posts .item .info a:link,
 	.posts .item .info a:visited,
 	.posts .item .info span { margin-right:8px; color:#777; }
+  .posts .item .info .right { float:right; margin-right:0; }
 	.posts .item .info .voteable{ margin-right:8px; color:#777; }
   .posts .item .info .voteable a:link,
   .posts .item .info .voteable a:visited { background:url(/images/icons.gif) no-repeat; 
     margin-right:5px; font-weight:bold;padding-left: 18px; }
   .posts .item .info .voteable a.vote_up { background-position:0px -34px; }
   .posts .item .info .voteable a.vote_down{ background-position:0px -1px; }
-	.posts .item .info a.comment {color: #727272; padding-left: 20px;	
+	.posts .item .info a.comment {color: #444; padding-left: 20px;	margin-right:20px;
 		background: transparent url(/images/icons.gif) no-repeat 0px -64px;}
   .posts #comments { margin:8px; }
   .posts #comments li { margin-bottom:5px; line-height:100%; font-size:80%; }

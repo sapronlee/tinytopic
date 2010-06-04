@@ -3,20 +3,22 @@
     <div class="tags">
       <%= post.tags.collect { |tag| "<span class=\"tag\">#{h tag.name}</span>" } %>
     </div>
-    <div class="info">
+    <div class="info clearfix">
       <span class="voteable">
         <a class="vote_up" href="#" onclick="return votePost(<%= post.id %>,1);"><%= post.votes_for %></a>
         <a class="vote_down" href="#" onclick="return votePost(<%= post.id %>,-1);"><%= post.votes_against %></a>
       </span>
       <a href="#" onclick="return loadComments(<%= post.id %>);" class="comment"><%=h post.comments_count %> 条评论</a>
-      <span class="author"><%= h post.user.name %></span>
-      <a href="<%= post_path(post) %>">#<%= post.id %></a>
-      <% if owner? post %>      
-        <span class="edit">
-        <a href="<%= edit_post_path(post) %>">修改</a> | 
-        <%= link_to '删除', post, :confirm => '确定要删除吗?', :method => :delete %>
-        </span>
-      <% end %>
+      <span class="right">
+        <% if owner? post %>      
+          <span class="edit">
+          <a href="<%= edit_post_path(post) %>">修改</a> | 
+          <%= link_to '删除', post, :confirm => '确定要删除吗?', :method => :delete %>
+          </span>
+        <% end %>
+        <span class="author"><%= h post.user.name %></span>
+        <a href="<%= post_path(post) %>">#<%= post.id %></a>
+      </span>
     </div>
   </li>
 
