@@ -2,6 +2,12 @@
 <%= form.label :login %><br />
 <%= form.text_field :login %>
 </p>
+<% if not form.object.new_record? %>
+<p>
+<%= form.label :name %><br />
+<%= form.text_field :name %>
+</p>
+<% end %>
 <p>
 <%= form.label :email %><br />
 <%= form.text_field :email %>
