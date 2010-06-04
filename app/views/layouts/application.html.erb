@@ -13,6 +13,9 @@
 	<div id="container">
 		<div id="top">
 			<b class="app_name"><a href="/"><%= Setting.app_name %></a></b>
+			<% if Setting.beta %>
+				<span class="beta">beta</span>
+			<% end %>
 			<div id="userbar">
 				<% if @current_user %>
 					Hello <%= h @current_user.name %>, <%= link_to 'New post', new_post_path %> | <a href="<%= edit_account_path %>">Account</a> | <a href="<%= destroy_user_session_path %>">Logout</a>
@@ -25,7 +28,7 @@
 			<%= yield %>
 		</div>
 		<div id="foot">
-			Powered by opensource project <a href="http://github.com/huacnlee/tinytopic/" target="_blank">tinytopic</a>.
+			<%= Setting.foot_html %>
 		</div>
 	</div>
 </body>

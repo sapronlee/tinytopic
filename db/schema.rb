@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20100603053919) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
-    t.text     "comment",                        :default => ""
+    t.text     "comment"
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.integer  "user_id"
