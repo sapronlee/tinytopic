@@ -5,6 +5,7 @@ defaults: &defaults
   app_name: TinyTopic
   beta: true
   foot_html: Powered by opensource project <a href="http://github.com/huacnlee/tinytopic">TinyTopic</a>.
+  admins: admin
   # neat_setting: 24
   # awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
 

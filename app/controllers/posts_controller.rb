@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        flash[:notice] = 'Post was successfully created.'
+        notice_success("发布成功。")
         format.html { redirect_to(@post) }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        flash[:notice] = 'Post was successfully updated.'
+        notice_success("修改成功。")
         format.html { redirect_to(@post) }
         format.xml  { head :ok }
       else
@@ -78,6 +78,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
+    notice_success("删除成功。")
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }

@@ -28,7 +28,15 @@ module ApplicationHelper
   # check current_user is item's owner
   def owner?(item)
     return false if @current_user.blank?
+    return true if admin?
     return true if item.user_id == @current_user.id
+    false
+  end
+
+  # check current_user is admin, this can configure in config/settings.yml admins
+  def admin?
+    return false if @current_user.blank?
+    return true if Setting.admins.index(@current_user.login)
     false
   end
 end
