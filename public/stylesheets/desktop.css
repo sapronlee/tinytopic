@@ -3,25 +3,6 @@ a:link,
 a:visited { color:#231D99;}
 input.long,textarea.long { width:800px;}
 
-.fieldWithErrors{ color:#CC707C; display:inline;}
-#errorExplanation {width:400px;border:2px solid #CC707C; padding-bottom:12px;margin-bottom:20px;}
-#errorExplanation h2{text-align:left;font-weight:bold; padding:4px 10px; font-size:12px;
-  background-color:#CC707C;color:#fff;}
-#errorExplanation p{color:#333;margin-bottom:0;padding:10px;}
-#errorExplanation ul { padding:0 30px; }
-#errorExplanation ul li {font-size:12px;list-style:square;}
-
-.successMessage,
-.warringMessage,
-.errorMessage { color:#FFF; font-size:12px; padding:4px 10px; margin:10px 0; }
-.successMessage { background:green; }
-.warringMessage { background:#F5B800; }
-.errorMessage { background:#CC707C;}
-
-.pagination { text-align: center; font-size:90%;}
-.form { }
-  .form p { margin-bottom:8px;}
-
 #container { width:800px; margin:0 auto; text-align: left;  }
 #top { padding:20px 0; }
   #top .app_name a:link,

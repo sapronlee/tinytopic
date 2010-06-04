@@ -1,10 +1,12 @@
 
 
   <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body, :class => "long" %>
+  <%= f.label :body, "内容:" %><br />
+  <%= f.text_area :body, :class => "long" %><br />
+    <span class="hint">建议在10行字左右，太多将会被删除。</span>
   </p>
   <p>
-    <%= f.label :tags %><br />
-    <%= f.text_field :tag_list, :class => "long" %>
+    <%= f.label :tags, "标签:" %><br />
+    <%= f.text_field :tag_list, :class => "long" %><br />
+    <span class="hint">用简单的词诠释此帖的主题,词语中间用英文逗号隔开，比如:“厕所,卫生纸,手指”</span>
   </p>

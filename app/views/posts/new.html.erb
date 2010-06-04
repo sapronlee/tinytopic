@@ -1,11 +1,11 @@
-<h1>New post</h1>
+<h1>发布新帖</h1>
 
 <div class="form">
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
 	<%= render :partial => 'form', :locals => { :f => f } %>
   <p>
-    <%= f.submit 'Create' %> or <%= link_to 'Back', posts_path %>
+    <%= f.submit '发布出去吧!' %> 或者 <%= link_to '返回', posts_path %>
   </p>
 <% end %>
 </div>

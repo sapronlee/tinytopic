@@ -1,11 +1,11 @@
-<h1>Editing post</h1>
+<h1>修改</h1>
 
 <div class="form">
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
 	<%= render :partial => 'form', :locals => { :f => f } %>
   <p>
-    <%= f.submit 'Update' %> or <%= link_to 'Back', posts_path %>
+    <%= f.submit '保存' %> 或 <%= link_to '取消', posts_path %>
   </p>
 <% end %>
 </div>
