@@ -1,10 +1,10 @@
 <p>
-<%= form.label :login %><br />
+<%= form.label :login,"用户名:" %><br />
 <%= form.text_field :login %>
 </p>
 <% if not form.object.new_record? %>
 <p>
-<%= form.label :name %><br />
+<%= form.label :name, "昵称:" %><br />
 <%= form.text_field :name %>
 </p>
 <% end %>
@@ -13,10 +13,10 @@
 <%= form.text_field :email %>
 </p>
 <p>
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+<%= form.label :password, form.object.new_record? ? "密码:" : "修改密码:" %><br />
 <%= form.password_field :password %>
 </p>
 <p>
-<%= form.label :password_confirmation %><br />
+<%= form.label :password_confirmation,"确认密码:" %><br />
 <%= form.password_field :password_confirmation %><br />
 </p>

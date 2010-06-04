@@ -1,12 +1,10 @@
-<h1>Edit My Account</h1>
+<h1>修改个人设置</h1>
 
 <div class="form">
 	<% form_for @user, :url => account_path do |f| %>
 	  <%= f.error_messages %>
 	  <%= render :partial => "form", :object => f %>
-	  <%= f.submit "Update" %>
+	  <%= f.submit "保存" %>
 	<% end %>
 </div>
 
-
-<br /><%= link_to "My Profile", account_path %>

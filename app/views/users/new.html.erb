@@ -1,9 +1,9 @@
-<h1>Register</h1>
+<h1>注册</h1>
 
 <div class="form">
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %> or <a href="<%= new_user_session_path %>">Login</a>
+  <%= f.submit "注册" %> 或者 <a href="<%= new_user_session_path %>">登录</a>
 <% end %>
 </div>
