@@ -1,0 +1,18 @@
+  <li id="post<%= post.id %>" class="item">
+    <div class="body" title="<%= post.created_at %>"><%=simple_format h post.body %></div>
+    <% if owner? post %>      
+      <div class="edit">
+      <a href="<%= edit_post_path(post) %>">修改</a> | 
+      <%= link_to '删除', post, :confirm => '确定要删除吗?', :method => :delete %>
+      </div>
+    <% end %>
+    <div class="tags">
+      <%= post.tags.collect { |tag| "<span class=\"tag\">#{h tag.name}</span>" } %>
+    </div>
+    <div class="info">
+      <span class="author"><%= h post.user.name %></span>
+      <a href="<%= post_path(post) %>">#<%= post.id %></a>
+      <a href="#" onclick="return loadComments(<%= post.id %>);" class="comment"><%=h post.comments_count %> 条评论</a>
+    </div>
+  </li>
+
