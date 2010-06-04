@@ -6,8 +6,8 @@ defaults: &defaults
   beta: true
   foot_html: Powered by opensource project <a href="http://github.com/huacnlee/tinytopic">TinyTopic</a>.
   admins: admin
-  # neat_setting: 24
-  # awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
+  # if you need, uncomment it and change the value as your key
+  # google_analytics_key: UA-16793760-1
 
 development:
   <<: *defaults
