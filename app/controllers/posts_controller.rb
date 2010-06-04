@@ -84,4 +84,36 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # POST /posts/1/vote
+  # POST /posts/1/vote.js
+  def vote 
+    if not @current_user
+      notice_warring("必须登录后才可以做此操作。")
+      respond_to do |format|
+        format.html { redirect_to new_user_session_path }
+        format.js { render :layout => false }
+      end
+      return
+    end
+
+    @post = Post.find(params[:id])
+    if params[:up] == "1"
+      @success = @current_user.vote_for(@post)
+    else
+      @success = @current_user.vote_against(@post)
+    end
+
+    respond_to do |format|
+      format.html { 
+        if @success
+          notice_success("提交成功。")
+        else
+          notice_warring("每人只有一次机会哦。")
+        end
+        redirect_to(post_path(@post)) 
+      }
+      format.js { render :layout => false }
+    end
+  end
 end

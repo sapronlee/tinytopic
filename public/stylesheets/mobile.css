@@ -42,6 +42,12 @@ h1 { font-size:140%; margin-bottom:10px;}
 	.posts .item .info a:link,
 	.posts .item .info a:visited,
 	.posts .item .info span { margin-right:8px; color:#777; }
+  .posts .item .info .voteable{ margin-right:8px; color:#777; }
+  .posts .item .info .voteable a:link,
+  .posts .item .info .voteable a:visited { background:url(/images/icons.gif) no-repeat; 
+  margin-right:5px; font-weight:bold;padding-left: 18px; }
+  .posts .item .info .voteable a.vote_up { background-position:0px -34px; }
+  .posts .item .info .voteable a.vote_down{ background-position:0px -1px; }
 	.posts .item .info a.comment {color: #727272; padding-left: 20px;	
 		background: transparent url(/images/icons.gif) no-repeat 0px -64px;}
   .posts #comments { margin:8px; }
