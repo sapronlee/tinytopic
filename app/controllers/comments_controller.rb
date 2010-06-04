@@ -21,11 +21,22 @@ class CommentsController < ApplicationController
                            :commentable_id => params[:commentable_id])
     @comments = Comment.find_all_by_commentable_type_and_commentable_id(params[:commentable_type],
                                                                         params[:commentable_id], 
-                                                                        :order => "id desc", :include => [:user])
+                                                                        :order => "id asc", :include => [:user])
     render :layout => false
   end
 
   def create
+		if not @current_user
+			notice_error("对不起，登陆后才可发表评论。")
+			respond_to do |format|
+				format.html { require_user }
+				format.js { 
+					render :layout => false
+			 	}
+			end
+			return false
+		end
+
     @comment = Comment.new(params[:comment])
     @comment.user_id = @current_user.id 
     if @comment.save

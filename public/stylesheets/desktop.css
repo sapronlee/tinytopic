@@ -11,6 +11,13 @@ input.long,textarea.long { width:800px;}
 #errorExplanation ul { padding:0 30px; }
 #errorExplanation ul li {font-size:12px;list-style:square;}
 
+.successMessage,
+.warringMessage,
+.errorMessage { color:#FFF; font-size:12px; padding:4px 10px; margin:10px 0; }
+.successMessage { background:green; }
+.warringMessage { background:#F5B800; }
+.errorMessage { background:#CC707C;}
+
 .pagination { text-align: center; font-size:90%;}
 .form { }
   .form p { margin-bottom:8px;}

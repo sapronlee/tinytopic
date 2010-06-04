@@ -15,15 +15,15 @@ class ApplicationController < ActionController::Base
   end
 
   def notice_success(msg)
-    flash[:notice] = msg
+    flash[:notice_success] = msg
   end
 
   def notice_error(msg)
-    flash[:notice] = msg
+    flash[:notice_error] = msg
   end
 
   def notice_warring(msg)
-    flash[:notice] = msg
+    flash[:notice_warring] = msg
   end
   
   private
